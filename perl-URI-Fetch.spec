@@ -18,6 +18,7 @@ BuildRequires:      perl(Storable)
 BuildRequires:      perl(Compress::Zlib)
 BuildRequires:      perl(Cache)
 BuildArch:          noarch
+BuildRoot:          %{_tmppath}/%{name}-%{version}
 
 %description
 Perl Module for Smart URI fetching/caching.
