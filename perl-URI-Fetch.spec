@@ -1,6 +1,6 @@
 %define module  URI-Fetch
 %define name    perl-%{module}
-%define release %mkrel 4
+%define release %mkrel 5
 %define version 0.08
 
 Name:               %{name}
