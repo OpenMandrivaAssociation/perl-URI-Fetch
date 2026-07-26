@@ -1,15 +1,13 @@
 %define upstream_name    URI-Fetch
-%define upstream_version 0.15
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.15
+Release:	2
 
 Summary:	Perl Module for Smart URI fetching/caching
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/neilb/URI-Fetch
-Source0:	https://cpan.metacpan.org/authors/id/N/NE/NEILB/URI-Fetch-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/N/NE/NEILB/URI-Fetch-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -25,7 +23,7 @@ BuildArch:	noarch
 Perl Module for Smart URI fetching/caching.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 SKIP_SAX_INSTALL=1 CFLAGS="%{optflags}" perl Makefile.PL INSTALLDIRS=vendor
@@ -49,9 +47,7 @@ make test
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.80.0-1mdv2010.0
 + Revision: 401931
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.08-5mdv2009.0
+- rebuild using %0.15 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.08-5mdv2009.0
 + Revision: 258727
 - rebuild
 
